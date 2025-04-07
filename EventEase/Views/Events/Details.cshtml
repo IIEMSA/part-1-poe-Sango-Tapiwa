@@ -1,0 +1,38 @@
+﻿@model EventEase.Models.Events
+
+@{
+    ViewData["Title"] = "Event Details";
+}
+
+<h1>Event Details</h1>
+
+<div>
+    <h4>Event Information</h4>
+    <dl class="dl-horizontal">
+        <dt>Name</dt>
+        <dd>@Model.Name</dd>
+
+        <dt>Date</dt>
+        <dd>@Model.Date.ToString("yyyy-MM-dd")</dd>
+
+        <dt>Description</dt>
+        <dd>@Model.Description</dd>
+
+        <dt>Image URL</dt>
+        <dd>
+            @if (!string.IsNullOrEmpty(Model.ImageUrl))
+            {
+                <img src="@Model.ImageUrl" alt="Event Image" width="200" />
+            }
+            else
+            {
+                <span class="text-muted">No image</span>
+            }
+        </dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-warning">Edit</a>
+    <a asp-action="Index" class="btn btn-primary">Back to List</a>
+</div>

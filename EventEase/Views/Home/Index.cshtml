@@ -1,0 +1,93 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EventEase - Home</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #343a40;
+        }
+
+        .navbar-brand {
+            font-weight: 600;
+            color: #fff;
+        }
+
+        .navbar-brand:hover {
+            color: #ffc107;
+        }
+
+        .jumbotron {
+            background-image: url('https://source.unsplash.com/1600x900/?event,venue');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 5rem 2rem;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+        }
+
+        .jumbotron h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+        }
+
+        .jumbotron p {
+            font-size: 1.3rem;
+        }
+
+        .btn-eventease {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            margin: 0.5rem;
+        }
+
+        .btn-eventease:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            background-color: #343a40;
+            color: #ccc;
+            padding: 1rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">EventEase</a>
+    </nav>
+
+    <div class="jumbotron text-center">
+        <div class="container">
+            <h1 class="display-4">Welcome to EventEase 🎉</h1>
+            <p class="lead">Easily manage venues, events, and bookings in one seamless platform.</p>
+            <div class="btn-group mt-4">
+                <a href="/Venues" class="btn btn-eventease btn-lg">Venues</a>
+                <a href="/Events" class="btn btn-eventease btn-lg">Events</a>
+                <a href="/Bookings" class="btn btn-eventease btn-lg">Bookings</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; @DateTime.Now.Year EventEase. All rights reserved.</p>
+    </div>
+</body>
+</html>
